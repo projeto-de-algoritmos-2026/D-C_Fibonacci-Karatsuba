@@ -2,7 +2,7 @@
 
 **Número da Lista**: 4<br>
 **Conteúdo da Disciplina**: Dividir e Conquistar — Multiplicação de Karatsuba e Fibonacci por fast doubling<br>
-**Link de Apresentação**: _a definir_
+**Link de Apresentação**: https://youtu.be/lw8K4brHIjU
 
 ## Alunos
 
