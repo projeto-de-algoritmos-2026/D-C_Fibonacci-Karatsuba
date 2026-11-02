@@ -18,6 +18,7 @@
     "nodiscard",
     "noexcept",
     "numeros",
+    "pisano",
     "STREQ",
     "subtrahend",
     "wconversion",
