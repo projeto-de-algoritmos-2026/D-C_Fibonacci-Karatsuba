@@ -5,8 +5,8 @@
 
 ## Alunos
 
-| Matrícula | Aluno |
-| -- | -- |
+| Matrícula | Aluno           |
+| --------- | --------------- |
 | xx/xxxxxx | xxxx xxxx xxxxx |
 | xx/xxxxxx | xxxx xxxx xxxxx |
 
@@ -73,12 +73,12 @@ O `Fibonacci` recebe o `Multiplier` pelo construtor. Assim, o mesmo cálculo rod
 
 Medidos com `fibonacci_benchmark 3`, em Release (`-O3`). O expoente empírico é a inclinação da reta de log(tempo) × log(tamanho), calculada por regressão linear sobre as 4 maiores medições.
 
-| | Escolar | Karatsuba | Teoria |
-|---|---|---|---|
-| Expoente empírico na multiplicação | 2,02 | 1,58 | 2 e 1,585 |
-| Expoente empírico em F(n) | 2,01 | 1,61 | 2 e 1,585 |
-| Multiplicar dois números de 65.536 limbs (2 milhões de bits) | 3,33 s | 0,25 s | 13× mais rápido |
-| F(4.096.000), com 855 mil dígitos | 6,36 s | 0,61 s | 10× mais rápido |
+|                                                              | Escolar | Karatsuba | Teoria          |
+| ------------------------------------------------------------ | ------- | --------- | --------------- |
+| Expoente empírico na multiplicação                           | 2,02    | 1,58      | 2 e 1,585       |
+| Expoente empírico em F(n)                                    | 2,01    | 1,61      | 2 e 1,585       |
+| Multiplicar dois números de 65.536 limbs (2 milhões de bits) | 3,33 s  | 0,25 s    | 13× mais rápido |
+| F(4.096.000), com 855 mil dígitos                            | 6,36 s  | 0,61 s    | 10× mais rápido |
 
 Até cerca de n = 16.000 os dois tempos coincidem, porque os números ainda estão abaixo do limite de 32 limbs e o Karatsuba usa a multiplicação escolar.
 
@@ -123,11 +123,11 @@ Na primeira configuração com testes, o CMake baixa o Google Test, então essa 
 ./build/release/fibonacci <n> [escolar|karatsuba] [--completo]
 ```
 
-| Argumento | Significado |
-|---|---|
-| `n` | Índice do termo |
-| `escolar` ou `karatsuba` | Algoritmo de multiplicação. O padrão é `karatsuba` |
-| `--completo` | Mostra todos os dígitos. Sem ele, números grandes aparecem só com os 30 primeiros e os 30 últimos dígitos |
+| Argumento                | Significado                                                                                               |
+| ------------------------ | --------------------------------------------------------------------------------------------------------- |
+| `n`                      | Índice do termo                                                                                           |
+| `escolar` ou `karatsuba` | Algoritmo de multiplicação. O padrão é `karatsuba`                                                        |
+| `--completo`             | Mostra todos os dígitos. Sem ele, números grandes aparecem só com os 30 primeiros e os 30 últimos dígitos |
 
 Exemplo:
 
@@ -165,4 +165,3 @@ cmake --build --preset debug --target lint    # formatação + clang-tidy
 
 - **Testes:** 112 testes cobrem o `BigInt` (construção, comparação e aritmética), os dois multiplicadores e o Fibonacci. O Karatsuba é comparado com a multiplicação escolar (oráculo) com vários limites de recursão, números aleatórios de até 3.000 dígitos e o pior caso de carry. O Fibonacci é conferido com valores conhecidos, com uma versão que só usa somas e com a identidade de Cassini.
 - **Limitações:** o `toString()` é O(n²), então converter F(n) para decimal fica lento para n muito grande. O CLI mostra esse tempo separado do cálculo, e o benchmark mede só o cálculo. A divisão do `BigInt` (`/` e `%`) é feita bit a bit; o Fibonacci não usa divisão, então isso não afeta os resultados.
-# D-C_Fibonacci-Karatsuba
