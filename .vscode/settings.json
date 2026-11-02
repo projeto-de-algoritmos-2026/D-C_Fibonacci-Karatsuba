@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 4,
+  "editor.detectIndentation": false,
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.compilerPath": "/usr/bin/g++",
+  "C_Cpp.errorSquiggles": "enabled",
+  "files.associations": {
+    "*.h": "cpp",
+    "*.hpp": "cpp"
+  },
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "cmake.buildDirectory": "${workspaceFolder}/build/debug"
+}

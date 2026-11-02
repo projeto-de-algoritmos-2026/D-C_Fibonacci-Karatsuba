@@ -1,0 +1,28 @@
+{
+  "version": "0.2",
+  "language": "en,pt,pt_BR",
+  "ignorePaths": ["**/build/**", "**/.git/**"],
+  "words": [
+    "bignum",
+    "cassini",
+    "constexpr",
+    "cppcoreguidelines",
+    "dndebug",
+    "endfunction",
+    "escolar",
+    "fibonacci",
+    "gtest",
+    "karatsuba",
+    "nodiscard",
+    "noexcept",
+    "STREQ",
+    "subtrahend",
+    "wconversion",
+    "werror",
+    "wextra",
+    "wformat",
+    "wnull",
+    "wpedantic",
+    "wshadow"
+  ]
+}
