@@ -1,0 +1,4 @@
+# O acesso ao argv exige aritmética de ponteiros; fica liberado só nesta pasta.
+InheritParentConfig: true
+Checks: >
+  -cppcoreguidelines-pro-bounds-pointer-arithmetic

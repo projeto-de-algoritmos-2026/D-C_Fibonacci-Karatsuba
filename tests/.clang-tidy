@@ -1,0 +1,6 @@
+# Nos testes, números literais são os próprios dados de teste, e trocar a ordem
+# dos argumentos é intencional (ex.: comutatividade).
+InheritParentConfig: true
+Checks: >
+  -readability-magic-numbers,
+  -readability-suspicious-call-argument
